@@ -70,4 +70,6 @@ if __name__ == "__main__":
     # get input and construct BN
     bn = get_input()
 
+    input_file.close()
+    output_file.close()
 
