@@ -119,7 +119,7 @@ def run_backward_dfs():
             for _neighbor in cur_node.neighbors:
                 if _neighbor == dest: continue
                 product[0] *= message[_neighbor.n][cur_node.n][0]
-                product[1] *= message[_neighbor.n][cur_node.n][0]
+                product[1] *= message[_neighbor.n][cur_node.n][1]
 
             # calculate message from cur_node to dest
             message_ji = [0, 0]
@@ -151,7 +151,7 @@ def message_passing():
     # initialize dfs queue
     dfs.append(root)
     visited = [False for _ in range(N)]
-    visited[0] = True
+    visited[root.n] = True
     run_backward_dfs()
     
 
